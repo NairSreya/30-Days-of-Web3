@@ -19,7 +19,7 @@
 5. **Unchecked Math** - Skip overflow checks when safe
 6. **Array Length Caching** - Don't read length every loop
 
-##Files
+## Files
 
 - `unoptimized.sol` - Gas-wasting patterns
 - `optimized.sol` - Optimized version
