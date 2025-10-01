@@ -42,6 +42,6 @@ Building consistent learning habits, documenting progress publicly, and creating
 
 ---
 
-** Star this repo** if you're following along or find it helpful!
+**Star this repo** if you're following along or find it helpful!
 
 **Last Updated:** October 1, 2025
