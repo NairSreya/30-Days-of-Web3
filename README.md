@@ -42,4 +42,4 @@ New content added daily. Check back often or follow my journey on LinkedIn!
 
 ---
 
-⭐ **Star this repo** if you find it helpful!
+**Star this repo** if you find it helpful!
