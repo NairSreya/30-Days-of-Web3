@@ -33,8 +33,8 @@ Browse the folders above to see each day's work. Each folder contains:
 
 ## Connect With Me
 
-- **LinkedIn:** [Your Profile](https://www.linkedin.com/in/sreya-nair-06b089252/)
-- **X (Twitter):** [@YourHandle](https://x.com/sreyynair)
+- [LinkedIn](https://www.linkedin.com/in/sreya-nair-06b089252/)
+- [Twitter](https://x.com/sreyynair)
 
 ## Follow Along
 
