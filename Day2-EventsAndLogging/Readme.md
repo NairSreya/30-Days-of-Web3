@@ -26,6 +26,6 @@
 - Initiate → Confirm → Complete → Cancel flow
 - Real-world pattern for escrow/payment systems
 
-## 🎯 Takeaway
+## Takeaway
 
 Index addresses and IDs for filtering. Skip indexing amounts to save gas.
