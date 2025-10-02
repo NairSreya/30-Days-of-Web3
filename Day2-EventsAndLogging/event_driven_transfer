@@ -1,0 +1,67 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract EventDrivenTransfer {
+    event TransferInitiated(bytes32 indexed transferId, address indexed from, address indexed to, uint256 amount);
+    event TransferConfirmed(bytes32 indexed transferId, address indexed confirmer);
+    event TransferCompleted(bytes32 indexed transferId, address indexed from, address indexed to, uint256 amount);
+    event TransferCancelled(bytes32 indexed transferId, string reason);
+    
+    enum Status { Pending, Confirmed, Completed, Cancelled }
+    
+    struct Transfer {
+        address from;
+        address to;
+        uint256 amount;
+        Status status;
+    }
+    
+    mapping(bytes32 => Transfer) public transfers;
+    mapping(address => uint256) public balances;
+    
+    function initiateTransfer(address to, uint256 amount) public returns (bytes32) {
+        require(balances[msg.sender] >= amount, "Insufficient balance");
+        require(to != address(0), "Invalid recipient");
+        
+        bytes32 id = keccak256(abi.encodePacked(msg.sender, to, amount, block.timestamp));
+        
+        transfers[id] = Transfer(msg.sender, to, amount, Status.Pending);
+        emit TransferInitiated(id, msg.sender, to, amount);
+        
+        return id;
+    }
+    
+    function confirmTransfer(bytes32 id) public {
+        Transfer storage t = transfers[id];
+        require(t.status == Status.Pending, "Not pending");
+        require(msg.sender == t.to || msg.sender == t.from, "Not authorized");
+        
+        t.status = Status.Confirmed;
+        emit TransferConfirmed(id, msg.sender);
+    }
+    
+    function completeTransfer(bytes32 id) public {
+        Transfer storage t = transfers[id];
+        require(t.status == Status.Confirmed, "Not confirmed");
+        require(balances[t.from] >= t.amount, "Insufficient balance");
+        
+        balances[t.from] -= t.amount;
+        balances[t.to] += t.amount;
+        t.status = Status.Completed;
+        
+        emit TransferCompleted(id, t.from, t.to, t.amount);
+    }
+    
+    function cancelTransfer(bytes32 id, string memory reason) public {
+        Transfer storage t = transfers[id];
+        require(t.status == Status.Pending || t.status == Status.Confirmed, "Cannot cancel");
+        require(msg.sender == t.from, "Only sender can cancel");
+        
+        t.status = Status.Cancelled;
+        emit TransferCancelled(id, reason);
+    }
+    
+    function deposit() public payable {
+        balances[msg.sender] += msg.value;
+    }
+}
