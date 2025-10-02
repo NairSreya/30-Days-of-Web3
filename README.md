@@ -1,47 +1,45 @@
-# 30-Days-of-Web3
+# 30 Days of Web3
 
 A 30-day challenge to explore Web3 development - one topic every day, building in public.
 
-## Challenge Progress
+## The Challenge
 
-| Day | Topic | Status | Link |
-|-----|-------|--------|------|
-| 1 | Gas Optimization in Solidity | Complete | [Day 1](./Day1-GasOptimization) |
-| 2 | Coming Soon | In Progress | - |
-| 3-30 | TBD | Upcoming | - |
+Learning Web3 systematically by diving deep into different topics each day - from smart contracts and DeFi protocols to optimization techniques and security best practices.
 
-## Goal
+Each day includes:
+- Hands-on coding and experiments
+- Detailed documentation in folder READMEs
+- Real-world examples and patterns
+- Key learnings and best practices
 
-Learn Web3 development systematically by diving deep into different topics each day - from smart contracts and DeFi protocols to optimization techniques and security best practices.
+## Explore by Day
 
-## Topics Covered
+Browse the folders above to see each day's work. Each folder contains:
+- `README.md` - What I learned and key insights
+- Code files - Contracts and examples
+- Documentation - Notes and comparisons
 
-- **Day 1:** Solidity Gas Optimization - Achieved 17% gas savings and fixed critical bugs
+## Topics Include
 
-## Repository Structure
+**Fundamentals:** Gas optimization, events, modifiers, storage patterns
 
-```
-30-Days-of-Web3/
-├── Day1-GasOptimization/
-│   ├── README.md
-│   ├── unoptimized.sol
-│   └── optimized.sol
-├── Day2-[Topic]/
-└── ...
-```
+**Token Standards:** ERC20, ERC721, ERC1155
+
+**DeFi Protocols:** AMMs, lending, staking, flash loans
+
+**Advanced Concepts:** Upgradeable contracts, oracles, cross-chain, account abstraction
+
+**Security:** Best practices, common vulnerabilities, audit techniques
 
 ## Connect With Me
 
-- [**LinkedIn**](https://www.linkedin.com/in/sreya-nair-06b089252/)
-- [**X**](https://x.com/sreyynairs)
-- [**Portfolio**](https://sreyaa.framer.website/)
+- **LinkedIn:** [Your Profile](https://www.linkedin.com/in/sreya-nair-06b089252/)
+- **X (Twitter):** [@YourHandle](https://x.com/sreyynair)
 
-## Why This Challenge?
+## Follow Along
 
-Building consistent learning habits, documenting progress publicly, and creating a portfolio of Web3 projects.
+New content added daily. Check back often or follow my journey on LinkedIn!
 
 ---
 
-**Star this repo** if you're following along or find it helpful!
-
-**Last Updated:** October 1, 2025
+⭐ **Star this repo** if you find it helpful!
